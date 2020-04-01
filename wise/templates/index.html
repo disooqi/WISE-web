@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            {#            <h1>Bootstrap starter template</h1>#}
+            {#            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text#}
+            {#                and a mostly barebones HTML document.</p>#}
+            <img class="mb-4" src="{{ url_for('static', filename='WISE.png') }}" alt="WISE LOGO" width="50%"
+                 class="img-fluid">
+            <br/>
+            <div class="search-box">
+                <input type="text" placeholder=" "/><span></span>
+            </div>
+            <br/>
+                <button id="advanced" type="button" class="btn btn-link">Advanced Search</button>
+        </div>
+
+    </main><!-- /.container -->
+
+{% endblock content %}

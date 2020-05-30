@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from .proxy import ReverseProxied
 # from flask_sqlalchemy import SQLAlchemy
 # from flask_bcrypt import Bcrypt
 # from flask_login import LoginManager
@@ -7,6 +8,7 @@ from flask import Flask
 
 
 app = Flask(__name__)
+app.wsgi_app = ReverseProxied(app.wsgi_app)
 # # app.config['USE_X_SENDFILE'] = True
 # app.config['SECRET_KEY'] = os.environ.get('ARABIC_SPEECH_SECRET_KEY')
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('ARABIC_SPEECH_DB_URI')

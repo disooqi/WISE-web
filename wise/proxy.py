@@ -43,3 +43,11 @@ class ReverseProxied(object):
         if scheme:
             environ['wsgi.url_scheme'] = scheme
         return self.app(environ, start_response)
+
+'''
+The references of this solution were here:
+https://web.archive.org/web/20190128010140/http://flask.pocoo.org/snippets/35/
+https://stackoverflow.com/questions/36258506/gunicorn-with-gaiohttp-worker-always-returning-404-with-flask-app
+https://stackoverflow.com/questions/18967441/add-a-prefix-to-all-flask-routes
+https://medium.com/@varunchitale/a-simple-python-api-using-flask-with-nginx-setup-on-aws-ec2-4a380ceaf006
+'''
